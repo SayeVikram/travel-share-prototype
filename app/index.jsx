@@ -5,6 +5,7 @@ import React, {useState} from 'react';
 import AuthScreen from "../Screens/AuthScreen";
 import SignupScreen from "../Screens/SignupScreen";
 import SampleScreen from "../Screens/SampleScreen";
+import '../global.css';
 
 const Stack = createNativeStackNavigator();
 

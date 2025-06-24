@@ -22,7 +22,7 @@ const Home = () => {
     const [isSignedIn, setSignIn] = useState(null);
     return(
         <SafeAreaProvider>
-            <SafeAreaView style={{flex:1, backgroundColor:"black"}}>
+            <SafeAreaView style={{flex:1, backgroundColor:"black", paddingTop: StatusBar.currentHeight}}>
                 <StatusBar translucent hidden={false} 
                     barStyle="light-content"
                     backgroundColor="#000000"

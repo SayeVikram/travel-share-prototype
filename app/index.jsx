@@ -19,7 +19,7 @@ import Login from './Login';
 
 
 const Home = () => {
-    const [isSignedIn, setSignIn] = useState(false);
+    const [isSignedIn, setSignIn] = useState(null);
     return(
         <SafeAreaProvider>
             <SafeAreaView style={{flex:1, backgroundColor:"black"}}>

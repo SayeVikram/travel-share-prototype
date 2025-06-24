@@ -1,4 +1,4 @@
-NOTES:
+NOTES and progress:
 
 6/23/25: Don't need to worry about async storage for now -> Supabase persistent instance saved
 
@@ -7,3 +7,4 @@ stack.
 
 As for when a user signs up/signs in, then I could just navigate to the nested ContentStack in the authstack
 
+FOR NOW, first make a really simple skeleton UI -> read through supabase docs about userauth -> have that set up to "complete" functionality for everything in the AuthStack

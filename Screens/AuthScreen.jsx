@@ -1,14 +1,47 @@
 import React, {useState} from 'react';
-import { Text, View, Image, TextInput, StyleSheet, Button, ScrollView, StatusBar, KeyboardAvoidingView } from "react-native";
-import { useNavigation } from '@react-navigation/native';
+import { Alert, Text, View, Image, TextInput, StyleSheet, Button, ScrollView, StatusBar, KeyboardAvoidingView } from "react-native";
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import { Card } from '@rneui/base';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import "../global.css";
+import { supabase } from '../lib/supabase';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 const AuthScreen = ({navigation}) => {
+
+    async function signInWithEmail() {
+    setLoading(true)
+    const { data: { session }, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    })
+
+    if(session){
+        navigation.dispatch(
+                    CommonActions.reset(
+                        {
+                            index: 0,
+                            routes: [{ name: 'Content' }],
+                        }
+                    )
+                )
+    }
+
+    if (error) Alert.alert(error.message)
+    setLoading(false)
+  }
+
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [showPassword, setShowPassword] = useState(false)
+
+    toggleShowPassword = () => {
+        setShowPassword(!showPassword)
+    }
+
 
     return(
         <SafeAreaProvider>
@@ -24,10 +57,13 @@ const AuthScreen = ({navigation}) => {
                 <Text className="text-white text-center font-extrabold text-2xl mb-5"> Sign in </Text>
                 
                     <TextInput placeholderTextColor={'white'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Email' value={email} onChangeText={setEmail} style={styles.input}/>
-                    <TextInput placeholderTextColor={'white'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Password' value={password} onChangeText={setPassword} style={styles.input}/>
-                
-                <View style={{backgroundColor: '#333333', width: 100, borderRadius: 10}} className="mb-3 mt-2 ml-12">
-                    <Button title='Sign in' color={'white'}/>
+                    
+                    <View style={{flex:1, flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
+                        <TextInput secureTextEntry={!showPassword}  placeholderTextColor={'white'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Password' value={password} onChangeText={setPassword} style={styles.input}/>
+                        <MaterialCommunityIcons size={18}  color="#aaa" name={showPassword ? 'eye-off' : 'eye'} onPress={() => toggleShowPassword()}/>
+                    </View>
+                <View style={{backgroundColor: '#333333', width: 100, borderRadius: 10}} className="mb-3 mt-2 ml-14">
+                    <Button disabled={loading} title='Sign in' color={'white'} onPress={() => signInWithEmail()}/>
                 </View>
 
                 <Button title='Sign up?' onPress={() => (navigation.navigate('Signup'))}/>

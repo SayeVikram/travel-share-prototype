@@ -9,6 +9,19 @@ import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 const Tab = createBottomTabNavigator();
 
+const icons = {
+    Landing : {
+        focused: require("../assets/icons8-art-focused.png"),
+        default: require("../assets/icons8-art-default.png")
+    },
+
+    Profile: {
+        focused: require("../assets/icons8-profile-focused.png"),
+        default: require("../assets/icons8-profile-default.png")
+    },
+}
+
+
 function MyTabBar({ state, descriptors, navigation }) {
   const { colors } = useTheme();
   const { buildHref } = useLinkBuilder();
@@ -26,6 +39,10 @@ function MyTabBar({ state, descriptors, navigation }) {
               : route.name;
 
         const isFocused = state.index === index;
+
+        const iconSource = isFocused
+          ? icons[route.name]?.focused
+          : icons[route.name]?.default;
 
 
         const onPress = () => {
@@ -49,6 +66,7 @@ function MyTabBar({ state, descriptors, navigation }) {
 
         return (
           <PlatformPressable
+            key={route.key}
             href={buildHref(route.name, route.params)}
             accessibilityState={isFocused ? { selected: true } : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
@@ -57,7 +75,15 @@ function MyTabBar({ state, descriptors, navigation }) {
             onLongPress={onLongPress}
             style={{ flex: 1, alignItems:"center", justifyContent:"center" }}
           >
-            <Text style={{ color: isFocused ? colors.primary : "white" }}>
+            {iconSource && (
+              <Image
+                source={iconSource}
+                style={{ width: 20, height: 20, marginBottom: 4 }}
+                resizeMode="contain"
+              />
+            )}
+
+            <Text style={{ color: isFocused ? colors.primary : "white" , fontSize:10}}>
               {label}
             </Text>
           </PlatformPressable>
@@ -73,6 +99,7 @@ function SampleScreen() {
         <SafeAreaView style={{flex:1, backgroundColor:"black", paddingTop: StatusBar.currentHeight}}>
             <Tab.Navigator
             tabBar={(props) => <MyTabBar {...props} />}
+            screenOptions={{headerShown: false}}
             >
             <Tab.Screen name="Landing" component={LandingScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />

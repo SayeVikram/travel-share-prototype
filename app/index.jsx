@@ -1,6 +1,6 @@
 import {NavigationContainer, NavigationIndependentTree} from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React, {useState} from 'react';
+import React, {useState, useEffect, useLayoutEffect} from 'react';
 import AuthScreen from "../Screens/AuthScreen";
 import SignupScreen from "../Screens/SignupScreen";
 import SampleScreen from "../Screens/SampleScreen";
@@ -15,10 +15,21 @@ import {
 } from 'react-native';
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import Login from './Login';
-
+import { supabase } from '../lib/supabase';
 
 
 const Home = () => {
+
+    useLayoutEffect(() => {
+        const fetchSession = async () => {
+            const { data: { user } } = await supabase.auth.getUser()
+
+            setSignIn(user)
+        }
+
+        fetchSession()
+    } , [])
+
     const [isSignedIn, setSignIn] = useState(null);
     return(
         <SafeAreaProvider>

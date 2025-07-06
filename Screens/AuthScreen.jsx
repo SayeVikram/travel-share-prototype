@@ -58,7 +58,7 @@ const AuthScreen = ({navigation}) => {
             alignItems:'center',
             marginTop:50
         }}>
-            <Image source={require("../assets/travelshare.png")} style={{width: 200, height: 200}}/>
+            <Image source={require("../assets/splashscreen/splash-icon-dark.png")} style={{width: 200, height: 200}}/>
             
             <Card containerStyle={{backgroundColor: 'white', width: 300, height: 300}} className="flex justify-center items-center">
                 <Text className="text-black text-center font-extrabold text-2xl mb-5"> Sign in </Text>

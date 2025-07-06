@@ -45,21 +45,28 @@ const AuthScreen = ({navigation}) => {
 
     return(
         <SafeAreaProvider>
-        <SafeAreaView style={{flex:1, backgroundColor:"black", paddingTop: StatusBar.currentHeight}} >
+        <SafeAreaView style={{flex:1, backgroundColor:"white", paddingTop: StatusBar.currentHeight}} >
         <ScrollView>
         <KeyboardAvoidingView behavior='height'>
 
 
-        <View className="flex-1 bg-black h-screen justify-center items-center ">
+        <View style={{
+            flex:1,
+            backgroundColor:"white",
+            height:"100vh",
+            justifyContent:'center',
+            alignItems:'center',
+            marginTop:50
+        }}>
             <Image source={require("../assets/travelshare.png")} style={{width: 200, height: 200}}/>
             
-            <Card containerStyle={{backgroundColor: 'black', width: 300, height: 300}} className="flex justify-center items-center">
-                <Text className="text-white text-center font-extrabold text-2xl mb-5"> Sign in </Text>
+            <Card containerStyle={{backgroundColor: 'white', width: 300, height: 300}} className="flex justify-center items-center">
+                <Text className="text-black text-center font-extrabold text-2xl mb-5"> Sign in </Text>
                 
-                    <TextInput placeholderTextColor={'white'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Email' value={email} onChangeText={setEmail} style={styles.input}/>
+                    <TextInput placeholderTextColor={'black'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Email' value={email} onChangeText={setEmail} style={styles.input}/>
                     
                     <View style={{flex:1, flexDirection:'row', justifyContent:'center', alignItems:'center'}}>
-                        <TextInput secureTextEntry={!showPassword}  placeholderTextColor={'white'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Password' value={password} onChangeText={setPassword} style={styles.input}/>
+                        <TextInput secureTextEntry={!showPassword}  placeholderTextColor={'black'} keyboardType='email-address' enablesReturnKeyAutomatically={true} keyboardAppearance='dark' placeholder='Password' value={password} onChangeText={setPassword} style={styles.input}/>
                         <MaterialCommunityIcons size={18}  color="#aaa" name={showPassword ? 'eye-off' : 'eye'} onPress={() => toggleShowPassword()}/>
                     </View>
                 <View style={{backgroundColor: '#333333', width: 100, borderRadius: 10}} className="mb-3 mt-2 ml-14">
@@ -87,7 +94,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderColor: "gray",
     borderRadius: 5,
-    color: 'white'
+    color: 'black'
   },
 });
 

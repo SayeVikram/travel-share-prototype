@@ -7,6 +7,25 @@ import { CommonActions } from "@react-navigation/native";
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 
+const CustomStatusBar = (
+  {
+    backgroundColor,
+    barStyle = "light-content",
+  }
+) => { 
+   
+   const insets = useSafeAreaInsets();
+
+   return (
+     <View style={{ height: insets.top, backgroundColor }}>
+        <StatusBar
+          animated={true}
+          backgroundColor={backgroundColor}
+          barStyle={barStyle} />
+     </View>
+   );
+}
+
 const Tab = createBottomTabNavigator();
 
 const icons = {
@@ -83,7 +102,7 @@ function MyTabBar({ state, descriptors, navigation }) {
               />
             )}
 
-            <Text style={{ color: isFocused ? colors.primary : "white" , fontSize:10}}>
+            <Text style={{ color: isFocused ? colors.primary : "black" , fontSize:10}}>
               {label}
             </Text>
           </PlatformPressable>
@@ -96,7 +115,8 @@ function MyTabBar({ state, descriptors, navigation }) {
 function SampleScreen() {
   return (
     <SafeAreaProvider>
-        <SafeAreaView style={{flex:1, backgroundColor:"black", paddingTop: StatusBar.currentHeight}}>
+        <SafeAreaView style={{flex:1, backgroundColor:"white"}}>
+        
             <Tab.Navigator
             tabBar={(props) => <MyTabBar {...props} />}
             screenOptions={{headerShown: false}}
@@ -118,7 +138,7 @@ const LandingScreen = ({navigation}) => {
 
     return(
         <View>
-            <Text>IGFEWYGYEW</Text>
+            <Text>Sample text</Text>
         </View>
     )
 }
@@ -148,7 +168,7 @@ const ProfileScreen = ({navigation}) => {
     return(
         <View>
 
-            <Button title='CLICK TO SGIRN OUT' onPress={() => signOut()}/>
+            <Button title='Click to sign out' onPress={() => signOut()}/>
         </View>
     )
 }

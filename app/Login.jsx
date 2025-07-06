@@ -29,7 +29,10 @@ const Login = ({isSignedIn}) => {
 
     return(
         
-        <View className="flex-1">
+        <View style={{
+            flex:1,
+            backgroundColor: "white"
+        }}>
        {isSignedIn ? <ContentStack/> : <AuthStack />}
        </View>
 

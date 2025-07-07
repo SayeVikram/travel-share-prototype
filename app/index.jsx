@@ -18,6 +18,7 @@ import Login from './Login';
 import { supabase } from '../lib/supabase';
 import * as SplashScreen from 'expo-splash-screen';
 import { SafeAreaView, SafeAreaProvider, useSafeAreaInsets} from 'react-native-safe-area-context';
+import * as Application from 'expo-application';
 
 
 
@@ -54,6 +55,8 @@ const Home = () => {
       }
     }
     prepare();
+
+    console.log(Application.applicationId)
 
   }, []);
 

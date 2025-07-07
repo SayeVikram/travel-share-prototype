@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06FA49B4FEE9E6B5A250694E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = BC28CCBD82ADA6D352FD9818 /* PrivacyInfo.xcprivacy */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		C951E25B3B5EDA581B99EC2B /* libPods-travelshare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F2B23BA08E628C0789C69EB /* libPods-travelshare.a */; };
-		DFA10D714023E1E091722812 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9207A1A75776D5274D4D0D23 /* PrivacyInfo.xcprivacy */; };
+		D26CDA47B648AD0FB2B17483 /* libPods-travelshare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FA2E633FECF3AE0350DE92 /* libPods-travelshare.a */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
-		F843771DFE9F8494D1A239A6 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D16A3EE889A315602419D5 /* ExpoModulesProvider.swift */; };
+		F8B19F98C1FC35FA5FEC95EA /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C687A29A2AE6173A0A3CB2B /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BD2D88F30D88C09F5E26FC1 /* Pods-travelshare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelshare.release.xcconfig"; path = "Target Support Files/Pods-travelshare/Pods-travelshare.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* travelshare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = travelshare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = travelshare/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = travelshare/Info.plist; sourceTree = "<group>"; };
-		6F2B23BA08E628C0789C69EB /* libPods-travelshare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travelshare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9207A1A75776D5274D4D0D23 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = travelshare/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		92CD4B5C55220BAECC718088 /* Pods-travelshare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelshare.release.xcconfig"; path = "Target Support Files/Pods-travelshare/Pods-travelshare.release.xcconfig"; sourceTree = "<group>"; };
+		45DB04820F81FD3FDB2C294E /* Pods-travelshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelshare.debug.xcconfig"; path = "Target Support Files/Pods-travelshare/Pods-travelshare.debug.xcconfig"; sourceTree = "<group>"; };
+		9C687A29A2AE6173A0A3CB2B /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-travelshare/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = travelshare/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		D0EF665D907E6CDE3763599D /* Pods-travelshare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-travelshare.debug.xcconfig"; path = "Target Support Files/Pods-travelshare/Pods-travelshare.debug.xcconfig"; sourceTree = "<group>"; };
-		D3D16A3EE889A315602419D5 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-travelshare/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		BC28CCBD82ADA6D352FD9818 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = travelshare/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		C9FA2E633FECF3AE0350DE92 /* libPods-travelshare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-travelshare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = travelshare/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* travelshare-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "travelshare-Bridging-Header.h"; path = "travelshare/travelshare-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -37,21 +37,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C951E25B3B5EDA581B99EC2B /* libPods-travelshare.a in Frameworks */,
+				D26CDA47B648AD0FB2B17483 /* libPods-travelshare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F3FF1844CDA9AF5C6DC2F81 /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
-			children = (
-				9AB0F37369287AEAD78C630A /* travelshare */,
-			);
-			name = ExpoModulesProviders;
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* travelshare */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,7 +53,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				9207A1A75776D5274D4D0D23 /* PrivacyInfo.xcprivacy */,
+				BC28CCBD82ADA6D352FD9818 /* PrivacyInfo.xcprivacy */,
 			);
 			name = travelshare;
 			sourceTree = "<group>";
@@ -70,19 +62,17 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6F2B23BA08E628C0789C69EB /* libPods-travelshare.a */,
+				C9FA2E633FECF3AE0350DE92 /* libPods-travelshare.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		64D68FFBE9E423701E4DAAE4 /* Pods */ = {
+		48EA638F0F21B87DE9004165 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				D0EF665D907E6CDE3763599D /* Pods-travelshare.debug.xcconfig */,
-				92CD4B5C55220BAECC718088 /* Pods-travelshare.release.xcconfig */,
+				DD15DDCE29A200F4D6B86066 /* travelshare */,
 			);
-			name = Pods;
-			path = Pods;
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -99,8 +89,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				64D68FFBE9E423701E4DAAE4 /* Pods */,
-				0F3FF1844CDA9AF5C6DC2F81 /* ExpoModulesProviders */,
+				CAB059E0C03B54FEB8DD407C /* Pods */,
+				48EA638F0F21B87DE9004165 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -115,14 +105,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9AB0F37369287AEAD78C630A /* travelshare */ = {
-			isa = PBXGroup;
-			children = (
-				D3D16A3EE889A315602419D5 /* ExpoModulesProvider.swift */,
-			);
-			name = travelshare;
-			sourceTree = "<group>";
-		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +112,24 @@
 			);
 			name = Supporting;
 			path = travelshare/Supporting;
+			sourceTree = "<group>";
+		};
+		CAB059E0C03B54FEB8DD407C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45DB04820F81FD3FDB2C294E /* Pods-travelshare.debug.xcconfig */,
+				0BD2D88F30D88C09F5E26FC1 /* Pods-travelshare.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD15DDCE29A200F4D6B86066 /* travelshare */ = {
+			isa = PBXGroup;
+			children = (
+				9C687A29A2AE6173A0A3CB2B /* ExpoModulesProvider.swift */,
+			);
+			name = travelshare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,13 +140,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "travelshare" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				F67958D95366D000604905D7 /* [Expo] Configure project */,
+				435C084095A27F018B79D098 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				57B27E87709AE1A93BEED6B1 /* [CP] Embed Pods Frameworks */,
+				E7CE2070043D52EBE3890ABE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +196,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				DFA10D714023E1E091722812 /* PrivacyInfo.xcprivacy in Resources */,
+				06FA49B4FEE9E6B5A250694E /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,23 +240,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		57B27E87709AE1A93BEED6B1 /* [CP] Embed Pods Frameworks */ = {
+		435C084095A27F018B79D098 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-travelshare/Pods-travelshare-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-travelshare/Pods-travelshare-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-travelshare/expo-configure-project.sh\"\n";
 		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -306,24 +307,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-travelshare/Pods-travelshare-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F67958D95366D000604905D7 /* [Expo] Configure project */ = {
+		E7CE2070043D52EBE3890ABE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-travelshare/Pods-travelshare-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
 			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-travelshare/expo-configure-project.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-travelshare/Pods-travelshare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -333,7 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				F843771DFE9F8494D1A239A6 /* ExpoModulesProvider.swift in Sources */,
+				F8B19F98C1FC35FA5FEC95EA /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +342,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0EF665D907E6CDE3763599D /* Pods-travelshare.debug.xcconfig */;
+			baseConfigurationReference = 45DB04820F81FD3FDB2C294E /* Pods-travelshare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -378,7 +378,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92CD4B5C55220BAECC718088 /* Pods-travelshare.release.xcconfig */;
+			baseConfigurationReference = 0BD2D88F30D88C09F5E26FC1 /* Pods-travelshare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

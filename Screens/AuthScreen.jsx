@@ -32,9 +32,8 @@ const AuthScreen = ({navigation}) => {
               provider: 'google',
               token: userInfo.data.idToken,
             })
-            console.log(error, data)
-            if(session)
-            {
+            console.log(session)
+
                 navigation.dispatch(
                     CommonActions.reset(
                         {
@@ -43,7 +42,7 @@ const AuthScreen = ({navigation}) => {
                         }
                     )
                 )
-            }
+            
           } else {
             throw new Error('no ID token present!')
           }

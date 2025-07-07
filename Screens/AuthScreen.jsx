@@ -119,10 +119,13 @@ const AuthScreen = ({navigation}) => {
             </Card>
 
             <GoogleSigninButton
-      size={GoogleSigninButton.Size.Wide}
+      size={15}
       color={GoogleSigninButton.Color.Dark}
       disabled={loading}
       onPress={() => {signInWithGoogle()}}
+      style={{
+        marginTop: 15
+      }}
     />
 
         </View>

@@ -7,24 +7,7 @@ import { CommonActions } from "@react-navigation/native";
 import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 
 
-const CustomStatusBar = (
-  {
-    backgroundColor,
-    barStyle = "light-content",
-  }
-) => { 
-   
-   const insets = useSafeAreaInsets();
 
-   return (
-     <View style={{ height: insets.top, backgroundColor }}>
-        <StatusBar
-          animated={true}
-          backgroundColor={backgroundColor}
-          barStyle={barStyle} />
-     </View>
-   );
-}
 
 const Tab = createBottomTabNavigator();
 

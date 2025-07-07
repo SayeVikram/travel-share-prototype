@@ -6,9 +6,52 @@ import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
 import "../global.css";
 import { supabase } from '../lib/supabase';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+  statusCodes,
+} from '@react-native-google-signin/google-signin'
+
 
 
 const AuthScreen = ({navigation}) => {
+
+    GoogleSignin.configure({
+    scopes: ['https://www.googleapis.com/auth/drive.readonly'],
+    iosClientId: process.env.EXPO_PUBLIC_GOOGLE_CLIENT_ID,
+  })
+
+    async function signInWithGoogle() {
+        setLoading(true)
+        try {
+            
+          await GoogleSignin.hasPlayServices()
+          const userInfo = await GoogleSignin.signIn()
+          if (userInfo.data.idToken) {
+            const { data: {session}, error  } = await supabase.auth.signInWithIdToken({
+              provider: 'google',
+              token: userInfo.data.idToken,
+            })
+            console.log(error, data)
+            if(session)
+            {
+                navigation.dispatch(
+                    CommonActions.reset(
+                        {
+                            index: 0,
+                            routes: [{ name: 'Content' }],
+                        }
+                    )
+                )
+            }
+          } else {
+            throw new Error('no ID token present!')
+          }
+        } catch (error) {
+          console.log(error)
+        }
+        setLoading(false)
+    }
 
     async function signInWithEmail() {
     setLoading(true)
@@ -75,6 +118,13 @@ const AuthScreen = ({navigation}) => {
 
                 <Button title='Sign up?' onPress={() => (navigation.navigate('Signup'))}/>
             </Card>
+
+            <GoogleSigninButton
+      size={GoogleSigninButton.Size.Wide}
+      color={GoogleSigninButton.Color.Dark}
+      disabled={loading}
+      onPress={() => {signInWithGoogle()}}
+    />
 
         </View>
 

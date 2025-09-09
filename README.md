@@ -8,3 +8,8 @@ stack.
 As for when a user signs up/signs in, then I could just navigate to the nested ContentStack in the authstack
 
 FOR NOW, first make a really simple skeleton UI -> read through supabase docs about userauth -> have that set up to "complete" functionality for everything in the AuthStack
+
+
+
+https://github.com/user-attachments/assets/775dabe5-d225-4b44-8b8c-f5d954d65e12
+
